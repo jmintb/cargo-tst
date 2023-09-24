@@ -130,13 +130,13 @@ fn main() {
     scores.sort_by(|a, b| b.0.partial_cmp(&a.0).unwrap());
 
     let selection = Select::new()
-        .with_prompt("What do you choose?")
+        .with_prompt("Choose a test")
         .items(
             &scores
                 .split_at(min(5, scores.len()))
                 .0
                 .iter()
-                .map(|v| v.1.clone())
+                .map(|v| format!("{} in {}", v.1.clone(), v.2.split("/").last().unwrap()))
                 .collect::<Vec<String>>(),
         )
         .interact()
