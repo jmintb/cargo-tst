@@ -148,6 +148,4 @@ fn main() {
     cmd.arg("test").arg(scores[selection].1.clone());
 
     cmd.exec();
-
-    println!("running_test: {}", scores[selection].1);
 }

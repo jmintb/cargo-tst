@@ -1,9 +1,9 @@
-# cargo-tst, fuzzy test search
+# cargo-tst: fuzzy test search
 
-cargo-tst is a small cargo extension to allow fuzzy finding of tests. It is currently implemented in a quick MVP fashion. Meaning that the code is ugly and many edge(and non edge)cases
+cargo-tst is a small cargo extension to allow fuzzy finding of tests. It is currently implemented in a quick MVP fashion. Meaning that the code is ugly, many edge(and non edge)cases
  are not handled. It is however already quite usefull if you have a project with many files and you are tired having to type in the exact name of the test you want to run.
 
-Please leave a star if this is something you are interested in. If others find this useful I will polish it and publish to crates.io.
+Please leave a star if this is something you are interested in. If others find this useful I will polish it and publish to crates.io. 
 
 ### Usage
 
