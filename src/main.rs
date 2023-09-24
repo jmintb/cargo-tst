@@ -3,15 +3,15 @@ use std::{
     collections::HashMap,
     ffi::OsStr,
     os::unix::process::CommandExt,
-    path::{self, Path, PathBuf},
+    path::{Path, PathBuf},
     process,
 };
 
-use clap::{Command, Parser};
+use clap::Parser;
 use dialoguer::Select;
 use grep::{
     regex::RegexMatcher,
-    searcher::{sinks::UTF8, Searcher, SearcherBuilder},
+    searcher::{sinks::UTF8, SearcherBuilder},
 };
 use serde::{Deserialize, Serialize};
 
@@ -80,7 +80,10 @@ fn main() {
     let cli_data = CliData::init();
     let wd = std::env::current_dir().unwrap();
     let wd = wd.file_name().unwrap().to_str().unwrap();
-    let Cli { term: Some(term), .. } = Cli::parse() else {
+    let Cli {
+        term: Some(term), ..
+    } = Cli::parse()
+    else {
         exec_test(cli_data.get_last_test(wd.to_string()).unwrap());
         return;
     };
