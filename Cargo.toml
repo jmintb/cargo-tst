@@ -1,0 +1,13 @@
+[package]
+name = "cargo-tst"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+fuzzywuzzy = "0.0.2"
+grep = "0.2.12"
+ripgrep = "13.0.0"
+syn = { version = "2.0.37", features = ["full"] }
+walkdir = "2.4.0"
